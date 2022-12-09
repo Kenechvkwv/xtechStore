@@ -1,5 +1,6 @@
 <?php
-$conn = new mysqli('localhost', 'root', '', 'xtechstore');
+include 'functions.php'
+;
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +54,24 @@ $conn = new mysqli('localhost', 'root', '', 'xtechstore');
     <div class="col-md-8">
       <div class="row">
         <h2 class="text-center">Top Products</h2>
-        <br />
+        <br /> <br />
+        <?php
+        // while ($product = mysqli_fetch_assoc($featured))
+        //   ;
+        ?>
+        <div class="col-md-5">
+          <h4>
+            <?php title(); ?>
+          </h4>
+          <img src="<?php image(); ?>" alt="<?php title(); ?>">
+          <p class="1price">N
+            <?php price(); ?>
+          </p>
+          <a href="details.php">
+            <button class="btn btn-success" type="button" data-toggle="modal" data-target="#details-1">More</button>
+          </a>
+        </div>
+        <?php ?>
       </div>
     </div>
   </main>
