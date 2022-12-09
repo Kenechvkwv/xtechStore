@@ -1,5 +1,5 @@
 <?php
-include 'functions.php'
+include 'functions.php';
 ;
 ?>
 
@@ -25,12 +25,9 @@ include 'functions.php'
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-2">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-2 mt-lg-3">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -55,15 +52,12 @@ include 'functions.php'
       <div class="row">
         <h2 class="text-center">Top Products</h2>
         <br /> <br />
-        <?php
-        // while ($product = mysqli_fetch_assoc($featured))
-        //   ;
-        ?>
+
         <div class="col-md-5">
           <h4>
             <?php title(); ?>
           </h4>
-          <img src="<?php image(); ?>" alt="<?php title(); ?>">
+          <img src="<?php image(); ?>" alt="<?php title(); ?>" class="img-fluid">
           <p class="1price">N
             <?php price(); ?>
           </p>
@@ -71,7 +65,6 @@ include 'functions.php'
             <button class="btn btn-success" type="button" data-toggle="modal" data-target="#details-1">More</button>
           </a>
         </div>
-        <?php ?>
       </div>
     </div>
   </main>

@@ -57,4 +57,36 @@ function price()
     }
     ;
 }
+function description()
+{
+    $db = mysqli_connect('localhost', 'root', '', 'xtechstore');
+
+    // Create connection
+    // $db = new mysqli($servername, $username, $password, $dbname); //variables can be used
+    $sql = "SELECT description FROM products WHERE featured=1";
+    $result = mysqli_query($db, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        // output data
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo $row['description'];
+        }
+    }
+    ;
+}
+function brandname()
+{
+    $db = mysqli_connect('localhost', 'root', '', 'xtechstore');
+
+    // Create connection
+    // $db = new mysqli($servername, $username, $password, $dbname); //variables can be used
+    $sql = "SELECT brandname FROM products WHERE featured=1";
+    $result = mysqli_query($db, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        // output data
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo $row['brandname'];
+        }
+    }
+    ;
+}
 ; ?>
